@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>
+      Frontend Mentor | Fylo landing page with dark theme and features grid
+    </title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  background-color: hsl(218, 28%, 13%);
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+.logos {
+  height: 40px;
+}
+body {
+  background-color: hsl(218, 28%, 13%);
+  color: hsl(0, 0%, 100%);
+}
+.herosection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  height: 600px;
+  width: 700px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#img1 {
+  height: 400px;
+  width: 500px;
+}
+.btn2 {
+  border-radius: 20px;
+  padding: 10px 40px;
+  border: none;
+  background-color: hsl(198, 60%, 50%);
+}
+.btn2:hover {
+  background-color: hsl(176, 68%, 64%);
+}
+.container2 {
+  height: 650px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.card6 a {
+  color: hsl(198, 60%, 50%);
+}
+a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 350px;
+}
+.card img {
+  height: 50px;
+}
+.container3 {
+  margin-top: 50px;
+  height: 400px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+}
+.card6 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#img2 {
+  background-image: url("./images/illustration-stay-productive.png");
+  background-size: contain;
+  height: 450px;
+  background-repeat: no-repeat;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  padding: 20px;
+}
+.box {
+  height: fit-content;
+  padding: 30px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: hsl(219, 30%, 18%);
+}
+.logo p {
+  padding: 2px;
+  font-size: 14px;
+  color: aliceblue;
+  font-weight: 100;
+}
+.logo img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 20px;
+  float: left;
+}
+.inputcard {
+  width: 600px;
+  height: 200px;
+  background-color: hsl(217, 28%, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
+input {
+  width: 300px;
+  border-radius: 20px;
+  padding: 8px;
+  margin: 10px;
+  border-style: none;
+}
+.btn {
+  border-radius: 20px;
+  border-style: none;
+  margin-left: 10px;
+  width: 150px;
+  padding: 8px;
+  background-color:hsl(198, 60%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+.btn:hover {
+  background-color: hsl(176, 68%, 64%);
+}
+footer {
+  margin-top: 20px;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+  gap: 20px;
+}
+li {
+  list-style: none;
+}
+.part1,
+.part2,
+.part3,
+.part4 {
+  line-height: 30px;
+}
+.part2,
+.part3,
+.part4 {
+  margin-top: 60px;
+}
+.part2 {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    row-gap: 20px;
+  }
+  .herosection {
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  #img1 {
+    height: fit-content;
+    width: 300px;
+    padding: 20px;
+  }
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-items: center;
+    width: fit-content;
+    margin: 200px 30px 30px 30px;
+  }
+  .container4 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .inputcard {
+    display: flex;
+    width: auto;
+    height: max-content;
+    padding: 20px;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 10px;
+    width: 300px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
+  </style>
+
+
+
+
+  <body>
+
+
+    <script>
+      function validate() {
+  const email = document.getElementById("getemail").value;
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (pattern.test(email)) {
+    alert("valid email address.");
+  } else {
+    alert("Invalid email address.");
+  }
+}
+    </script>
+    <header>
+      <img src="./images/logo.svg" alt="" class="logos" />
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="">Sign In</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="container">
+        <div class="herosection">
+          <img src="./images/illustration-intro.png" id="img1" alt="" />
+
+          <h2>All your files in one secure location, accessible anywhere.</h2>
+          <p>
+            Fylo stores all your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends
+            family, and co-workers.
+          </p>
+          <button class="btn2">Get Started</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container2">
+          <div class="card card1">
+            <img src="./images/icon-access-anywhere.svg" alt="" />
+            <h3>Access your files, anywhere</h3>
+            <p>
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </p>
+          </div>
+          <div class="card card2">
+            <img src="./images/icon-security.svg" alt="" />
+            <h3>Security you can trust</h3>
+            <p>
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </p>
+          </div>
+          <div class="card card3">
+            <img src="./images/icon-collaboration.svg" alt="" />
+            <h3>Real-time collaboration</h3>
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+          </div>
+          <div class="card card4">
+            <img src="./images/icon-any-file.svg" alt="" />
+            <h3>Store any type of file</h3>
+            <p>
+              Whether you're sharing holidays photos or work documents, Fylo has
+              you covered allowing for all file types to be securely stored and
+              shared.
+            </p>
+          </div>
+        </div>
+        <div class="container3">
+          <div class="card5" id="img2"></div>
+          <div class="card6">
+            <h1>Stay productive, wherever you are</h1>
+            <p>
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+            <a href="">
+              See how Fylo works <img src="./images/icon-arrow.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="container4">
+          <div class="box">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div class="logo">
+              <img src="./images/profile-1.jpg" alt="" />
+              <p>Satish Patel</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
+          </div>
+          <div class="box">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div class="logo">
+              <img src="./images/profile-2.jpg" alt="" />
+              <p>Bruce McKenzie</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
+          </div>
+          <div class="box">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div class="logo">
+              <img src="./images/profile-3.jpg" alt="" />
+              <p>Iva Boyd</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+        <div class="inputcard">
+          <h2>Get early access today</h2>
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+          <div id="mail">
+            <input type="email" placeholder="email@example.com" id="getemail" />
+            <button class="btn" onclick="validate()">
+              Get Started For Free
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="part1">
+        <img src="./images/logo.svg" class="logos" alt="" />
+        <p>
+          <img src="./images/icon-location.svg" alt="" /> Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua
+        </p>
+      </div>
+      <div class="part2">
+        <p><img src="./images/icon-phone.svg" alt="" /> +1-543-123-4567</p>
+        <p><img src="./images/icon-email.svg" alt="" /> example@fylo.com</p>
+      </div>
+      <div class="part3">
+        <li>About Us</li>
+        <li>Jobs</li>
+        <li>Press</li>
+        <li>Blog</li>
+      </div>
+      <div class="part4">
+        <li>Contact Us</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+      </div>
+
+      <div class="part3">
+        <p>ⓕ</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
